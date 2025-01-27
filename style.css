@@ -104,3 +104,53 @@ span{
 .gradient-button:hover{
 transform: scale(1.05);
 }
+
+section{
+    min-height: 100vh; /*Indica que el section ocupara el 100% de la pagina*/
+    padding: 15rem 10%;  
+}
+
+.home{
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem; /*Establece espacio entre los elementos*/
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column; /*Organiza el contenido en forma de columna*/
+    align-items: right;
+    text-align: right;
+}
+
+.home-content h1{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1; /*Separacion entre linea*/
+}
+
+.home-content h3{
+    margin: 1rem 0;
+    font-size: 4rem;
+    line-height: 1.8;
+}
+
+.home-content p{
+    font-size: 1.5rem;
+}
+
+.home-img img{
+    width: 30vw; /*Manejamos el tamaño de la imagen*/
+    border-radius: 50%;
+    box-shadow: 0 0 30px var(--main-color); /*amos una sombra alrededor de la imagen*/
+    transition: 0.4s ease-in-out; /*Tiempo en el que se hace el efecto*/
+}
+
+.home-img img:hover{
+    box-shadow: 0 0 30px var(--main-color);
+    box-shadow: 0 0 50px var(--main-color);
+    box-shadow: 0 0 100px var(--main-color);
+}
