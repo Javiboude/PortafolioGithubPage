@@ -11,8 +11,13 @@
     --bg-color: #080808; /* Color de fondo principal de la página */
     --second-bg-color: #101010; /* Color de fondo secundario */
     --text-color: white; /* Color del texto */
-    --main-color: rgb(72, 144, 199); /* Color principal para acentos o elementos destacados */
+    --main-color: rgb(72, 163, 199); /* Color principal para acentos o elementos destacados */
 }
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+  }
 
 body {
     background: var(--bg-color); /* Aplica el color de fondo definido en las variables CSS */
@@ -21,14 +26,14 @@ body {
 .header {
     position: fixed; /* Fija el header en una posición que no cambia al hacer scroll */
     width: 100%; /* El header ocupa todo el ancho disponible de la página */
-    top: 0; /* Coloca el header al inicio de la página */
-    left: 0; /* Alínea el header con el borde izquierdo de la página */
-    padding: 0; /* Elimina cualquier espacio interno adicional del header */
+    top: 0;
+    left: 0;
+    padding: 4rem 15%; /* Elimina cualquier espacio interno adicional del header, si quieres que el padding sea igual en izquierda que en derecha utilizar %*/
     background: rgba(0, 0, 0, 0.3); /* Aplica un fondo negro semitransparente */
     backdrop-filter: blur(10px); /* Agrega un efecto de desenfoque al fondo detrás del header */
     display: flex; /* Da control para alinear los elementos hijos del header */
     justify-content: space-between; /* Coloca los elementos hijos con espacio igual entre ellos */
-    align-items: center; /* Centra verticalmente los elementos dentro del header */
+    align-items: center;/* Centra verticalmente los elementos dentro del header */
     z-index: 1000; /* Asegura que el header esté encima de otros elementos de la página */
 }
 
@@ -39,7 +44,6 @@ body {
 }
 
 .logo{
-    padding-left: 3rem;
     font-size: 3rem;
     color: var(--text-color);
     font-weight: 800;
@@ -51,12 +55,13 @@ body {
 
 /*El :hover se utiliza para aplicar estilos cuando el puntero esta encima de lo escogido*/
 .logo:hover{
+    /*Agranda el tamaño*/
  transform: scale(1.1);
 }
 
 span{
     background: linear-gradient(
-        279deg,
+        270deg,
         rgb(87, 210, 241) 10%,
         rgb(46, 117, 224) 100%
     );/*Fondo de colo gradiente*/
@@ -68,7 +73,34 @@ span{
 .navbar a{
     font-size: 1.8rem;
     color: var(--text-color);
-    margin-left: 4rem;
+    margin-left: 4rem;/*Representa el grueso de la fuente*/
     font-weight: 500;
-    transform: 0.3 ease-in-out;
+    transition: 0.3 ease-in-out;
+    border-bottom: 3px solid transparent;/* */
+}
+
+.navbar a:hover{
+    color: var(--main-color);/*Cambiamos el color al main color*/
+    border-bottom: 3px solid var(--main-color);/*Crea una linea debajo de los textos*/
+}
+
+.gradient-button{
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    background: linear-gradient(
+        279deg,
+        rgb(87, 210, 241) 10%,
+        rgb(46, 117, 224) 100%
+    );
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3 ease-in-out;
+    color: white;
+    border: none;
+    text-wrap: nowrap;
+}
+
+.gradient-button:hover{
+transform: scale(1.05);
 }
