@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins";
+}
+
+:root{
+    --bg-color: #080808;
+    --second-bg-color: #101010;
+    --text-color: white;
+    --main-colot: rgb(72, 144, 199);
+
+}
+
+body{
+background: var(--bg-color);
+}
+
+/* ponemos el punto para indicar que llamamos al nombre de la clase*/
+.header{
+/*Se fija en una posicion de la pagina y es inmobible*/
+position: fixed;
+/*El header ocupara el 100% del ancho disponible*/
+width: 100%;
+/*No hay padding en el top*/
+top: 0;
+/*No hay padding a la izquierda*/
+left: 0;
+/*Elimina cualquier espacio*/
+padding: 0;
+/*Cra u fondo tranlucido con tus colores elegidos*/
+background: rgba(0, 0, 0, 0.3);
+/*Aplica n efecto de desenhoque*/
+backdrop-filter: blur(10xp);
+}
