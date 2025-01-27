@@ -1,38 +1,74 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    scroll-behavior: smooth;
-    font-family: "Poppins";
+* {
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0; /* Elimina el padding predeterminado de todos los elementos */
+    box-sizing: border-box; /* Asegura que el ancho y alto incluyan padding y borde */
+    text-decoration: none; /* Elimina la decoración predeterminada en los enlaces */
+    scroll-behavior: smooth; /* Permite un desplazamiento suave al navegar en la página */
+    font-family: "Poppins"; /* Define una fuente personalizada para todo el contenido */
 }
 
-:root{
-    --bg-color: #080808;
-    --second-bg-color: #101010;
-    --text-color: white;
-    --main-colot: rgb(72, 144, 199);
-
+:root {
+    --bg-color: #080808; /* Color de fondo principal de la página */
+    --second-bg-color: #101010; /* Color de fondo secundario */
+    --text-color: white; /* Color del texto */
+    --main-color: rgb(72, 144, 199); /* Color principal para acentos o elementos destacados */
 }
 
-body{
-background: var(--bg-color);
+body {
+    background: var(--bg-color); /* Aplica el color de fondo definido en las variables CSS */
 }
 
-/* ponemos el punto para indicar que llamamos al nombre de la clase*/
-.header{
-/*Se fija en una posicion de la pagina y es inmobible*/
-position: fixed;
-/*El header ocupara el 100% del ancho disponible*/
-width: 100%;
-/*No hay padding en el top*/
-top: 0;
-/*No hay padding a la izquierda*/
-left: 0;
-/*Elimina cualquier espacio*/
-padding: 0;
-/*Cra u fondo tranlucido con tus colores elegidos*/
-background: rgba(0, 0, 0, 0.3);
-/*Aplica n efecto de desenhoque*/
-backdrop-filter: blur(10xp);
+.header {
+    position: fixed; /* Fija el header en una posición que no cambia al hacer scroll */
+    width: 100%; /* El header ocupa todo el ancho disponible de la página */
+    top: 0; /* Coloca el header al inicio de la página */
+    left: 0; /* Alínea el header con el borde izquierdo de la página */
+    padding: 0; /* Elimina cualquier espacio interno adicional del header */
+    background: rgba(0, 0, 0, 0.3); /* Aplica un fondo negro semitransparente */
+    backdrop-filter: blur(10px); /* Agrega un efecto de desenfoque al fondo detrás del header */
+    display: flex; /* Da control para alinear los elementos hijos del header */
+    justify-content: space-between; /* Coloca los elementos hijos con espacio igual entre ellos */
+    align-items: center; /* Centra verticalmente los elementos dentro del header */
+    z-index: 1000; /* Asegura que el header esté encima de otros elementos de la página */
+}
+
+#menu-icon{
+    font-size: 3.5rem;
+    color: var(--main-color);
+    display: none;
+}
+
+.logo{
+    padding-left: 3rem;
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    /*ca,mbia el estilo del cursor*/
+    cursor: pointer;
+    /*hace que la transicion sea mas suave*/
+    transition: 0.3s ease-in-out;
+}
+
+/*El :hover se utiliza para aplicar estilos cuando el puntero esta encima de lo escogido*/
+.logo:hover{
+ transform: scale(1.1);
+}
+
+span{
+    background: linear-gradient(
+        279deg,
+        rgb(87, 210, 241) 10%,
+        rgb(46, 117, 224) 100%
+    );/*Fondo de colo gradiente*/
+    /*Se utilizan las dos ultimas juntas*/
+    background-clip: text; /* Aplica el fondo solo al texto */
+    color: transparent;/* Hace el texto transparente para mostrar el fondo */
+}
+
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transform: 0.3 ease-in-out;
 }
