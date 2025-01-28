@@ -102,7 +102,7 @@ span{
 }
 
 .gradient-button:hover{
-transform: scale(1.05);
+transform: scale(1.10);
 }
 
 section{
@@ -154,3 +154,47 @@ section{
     box-shadow: 0 0 50px var(--main-color);
     box-shadow: 0 0 100px var(--main-color);
 }
+
+.social-icons a{
+    display: inline-flex; /*Cra un contenedor ocupando solo el espacio que necesita, dejando alienar otras estiquetas */
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 0.5rem;
+    transition: 0.3 ease-in-out;
+}
+
+.social-icons a:hover{
+    color: var(--text-color);
+    background-color: var(--main-color);
+    transform: scale(1.2)translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.btn-group a{
+    font-size: 1.8rem;
+    margin: 0rem 0.5rem;
+    padding: 0.7rem 1.5rem;
+    color: black;
+    background: linear-gradient(
+        279deg,
+        rgb(87, 210, 241) 10%,
+        rgb(46, 117, 224) 100%
+    );
+    border-radius: 3rem;
+    letter-spacing: 1px;
+    transition: 0.3 ease-in-out;
+}
+
+.btn-group a:hover{
+    color: var(--text-color);
+    background-color: var(--main-color);
+    transform: scale(1.9);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
