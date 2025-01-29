@@ -28,7 +28,7 @@ body {
     width: 100%; /* El header ocupa todo el ancho disponible de la página */
     top: 0;
     left: 0;
-    padding: 4rem 15%; /* Elimina cualquier espacio interno adicional del header, si quieres que el padding sea igual en izquierda que en derecha utilizar %*/
+    padding: 3rem 15%; /* Elimina cualquier espacio interno adicional del header, si quieres que el padding sea igual en izquierda que en derecha utilizar %*/
     background: rgba(0, 0, 0, 0.3); /* Aplica un fondo negro semitransparente */
     backdrop-filter: blur(10px); /* Agrega un efecto de desenfoque al fondo detrás del header */
     display: flex; /* Da control para alinear los elementos hijos del header */
@@ -107,11 +107,10 @@ transform: scale(1.10);
 
 section{
     min-height: 100vh; /*Indica que el section ocupara el 100% de la pagina*/
-    padding: 15rem 10%;  
+    padding: 13rem 10%;  
 }
 
 .home{
-    color: aliceblue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,18 +127,27 @@ section{
 .home-content h1{
     font-size: 7rem;
     font-weight: 700;
-    margin-top: 1.5rem;
+    margin-top: 0,5rem;
     line-height: 1; /*Separacion entre linea*/
+    color: aliceblue;
 }
 
-.home-content h3{
-    margin: 1rem 0;
+h2{
+    color: aliceblue;
+    font-size: 4rem;
+}
+
+h3{
     font-size: 4rem;
     line-height: 1.8;
+    color: aliceblue;
 }
 
-.home-content p{
+p{
+    margin: 1rem 0;
+    display: flex;
     font-size: 1.5rem;
+    color: aliceblue;
 }
 
 .home-img img{
@@ -188,13 +196,70 @@ section{
     );
     border-radius: 3rem;
     letter-spacing: 1px;
-    transition: 0.3 ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .btn-group a:hover{
     color: var(--text-color);
     background-color: var(--main-color);
-    transform: scale(1.9);
     box-shadow: 0 0 25px var(--main-color);
 }
 
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: var(--second-bg-color);
+}
+
+.about-content a {
+    display: inline-flex;
+    justify-content: left;
+    align-items: left;
+    font-size: 1.8rem;
+    margin: 1rem 0rem;
+    padding: 0.7rem 1.5rem;
+    color: var(--text-color);
+    background: linear-gradient(
+        279deg,
+        rgb(87, 210, 241) 10%,
+        rgb(46, 117, 224) 100%
+    );
+    border-radius: 3rem;
+    box-shadow: 0 0 10px var(--main-color); /* Sombra permanente válida */
+}
+
+.about-content a:hover {
+    transform: scale(1.1);
+}
+
+.about-img img {
+    width: 30vw;
+    box-shadow: 0 0 25px var(--main-color); /* Corregido */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+}
+
+.about-img img:hover {
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+    transform: scale(1.4); /* Hace crecer la imagen en hover */
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(
+        279deg,
+        rgb(87, 210, 241) 10%,
+        rgb(46, 117, 224) 100%
+    );
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+}
