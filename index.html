@@ -13,74 +13,130 @@
         <!-- Se utiliza para crear vinculos a traves de enlaces, junto al css podemos decorarlos mas-->
         <a href="#home" class="logo">
             <!--Se utiliza para aplicarle estilos a una parte del texto-->
-            Javier <span>Boudere</span>
+            Javier <span>Bouderé</span>
         </a>
         
         <!--Se utiliza para escribir texto en cursiva o iconos, en este caso utilizamos boxIcons para hacer referencia y utilizar el icono-->
         <i class="bx bx-menu" id="menu-icon"></i>
 
         <!--Etiqueta utilizada para agrupar una seccion de enlaces, solo cuando son los as importantes-->
-        <nav class="navbar">
+        <div>
+            <nav class="navbar">
             <!--Crearemos vinculos gracias a los <a> -->
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#cotact">Contact</a>
-        </nav>
+            <a href="#home">Inicio</a>
+            <a href="#sobre-mi">Sobre Mi</a>
+            <a href="#conocimientos">Conocimientos</a>
+            </nav>
+        </div>
 
-        <!--Creamos un botton, combinado con el css le podras dar estilo-->
-        <button class="gradient-button">Contact Me
-        </button>
+        <div class="theme-toggle">
+            <i class='bx bx-sun' id="theme-icon"></i>
+        </div>
+
+        
+        
     </header>
 
     <!--Agrupa contenido relacionado con el apartado de home-->
     <section class="home" id="home">
         <!--Agrupa contenido pero a mas bajo nivel-->
         <div class="home-content">
-            <h1>Hey! I'm <span>Javier</span></h1>
-            <h3>A <span>Softwer Developer</span></h3>
-            <p>Passionate about technology and always driven by a strong desire to innovate, I focus on finding creative and effective solutions to complex problems. My journey in multiplatform application development has been a continuous evolution, where I have learned to approach challenges in a practical and strategic way. I am motivated by teamwork and collaboration, as I believe the best results come from the union of ideas and collective effort.</p>
+            <h1>Hola! Soy <span>Javier</span></h1>
+            <h3><span>Desarrollador Software</span></h3>
 
             <div class="social-icons">
-                <a href="#">
+                <a href="https://github.com/Javiboude">
                     <i class="bx bxl-github"></i>
                 </a>
 
-                <a href="#">
+                <a href="https://www.linkedin.com/in/javierboudere/">
                     <i class="bx bxl-linkedin-square"></i>
                 </a>
 
-                <a href="#">
+                <a href="https://www.instagram.com/javier_boudere/">
                     <i class="bx bxl-instagram-alt"></i>
                 </a>
-            </div>
-
-            <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
-                <a href="#Contact" class="btn">Contact</a>
             </div>
         </div>
 
         <div class="home-img">
             <!--Lo utilizamos para subir imagnes-->
-            <img src="Images/Yo.png" alt="">
+            <img src="Images/Yo.jpeg" alt="Foto de Javier Bouderé">
         </div>
     </section>
 
-    <section class="about" id="about">
-
-        <div class="about-img">
-            <img src="Images/CurriculumTrab.png" alt="">
+    <section class="sobre-mi" id="sobre-mi">
+        <div class="sobreMi">
+            <h2>Sobre <span>mi</span></h2>
+            <div class="sobreMi-content">
+                <div class="sobreMi-text">
+                    <p>Soy un desarrollador de software con experiencia en múltiples lenguajes de programación y frameworks. Me considero una persona con pensamiento crítico, observador, responsable y sociable.</p>
+                    
+                    <p>Cuento con sólidos conocimientos en programación y experiencia en el desarrollo de aplicaciones web, móviles y de escritorio. He trabajado en proyectos como la creación de una app de banca simulada, así como en la gestión de bases de datos y páginas web. </p>
+                    
+                    <p>Cuando no estoy programando, disfruto del deporte, especialmente el boxeo y el gimnasio, que son mis grandes pasiones. También me encanta salir con mis amigos y disfrutar de buenos momentos juntos.</p>
+                </div>
+                <div class="sobreMi-skills">
+                    <h3>Mis habilidades clave:</h3>
+                    <ul>
+                        <li>Desarrollo Full Stack</li>
+                        <li>Arquitectura de software</li>
+                        <li>Optimización de rendimiento</li>
+                        <li>Trabajo en equipo</li>
+                        <li>Resolución de problemas</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
+    <section class="conocimientos" id="conocimientos">
         <div class="about-content">
-            <h2>About <span>Me</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam molestiae ipsam omnis rerum corporis. Doloremque cumque dolorem vel ducimus in dolore earum aliquam. Architecto asperiores ipsam laboriosam molestiae amet! Itaque?</p>
-            <a href="#" class="btn"> Read More</a>
+            <h2><span>Conocimientos</span></h2>                
+            
+            <div class="category">
+                <h3>Lenguajes</h3>
+                <div class="icons">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin">
+                </div>
+            </div>
+    
+            <div class="category">
+                <h3>Frontend</h3>
+                <div class="icons">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular" title="Angular">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" title="Bootstrap">
+                </div>
+            </div>
+    
+            <div class="category">
+                <h3>Backend</h3>
+                <div class="icons">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="MongoDB">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" title="Spring Boot">
+                </div>
+            </div>
+    
+            <div class="category">
+                <h3>Control de versiones</h3>
+                <div class="icons">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" title="GitHub">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg" alt="Bitbucket" title="Bitbucket">
+                </div>
+            </div>
+            
         </div>
-
     </section>
-
-    <script> src="script.js"</script>
+    
+    <script src="script.js"></script>
 </body>
 </html>

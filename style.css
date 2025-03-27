@@ -1,170 +1,167 @@
 * {
-    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
-    padding: 0; /* Elimina el padding predeterminado de todos los elementos */
-    box-sizing: border-box; /* Asegura que el ancho y alto incluyan padding y borde */
-    text-decoration: none; /* Elimina la decoración predeterminada en los enlaces */
-    scroll-behavior: smooth; /* Permite un desplazamiento suave al navegar en la página */
-    font-family: "Poppins"; /* Define una fuente personalizada para todo el contenido */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
 }
 
 :root {
-    --bg-color: #080808; /* Color de fondo principal de la página */
-    --second-bg-color: #101010; /* Color de fondo secundario */
-    --text-color: white; /* Color del texto */
-    --main-color: rgb(72, 163, 199); /* Color principal para acentos o elementos destacados */
+    --bg-color: #0f172a;
+    --second-bg-color: #1e293b;
+    --text-color: #f8fafc;
+    --main-color: #7c3aed;
+    --accent-color: #a78bfa;
+    --highlight-color: #c4b5fd;
+    --navbar-bg: rgba(15, 23, 42, 0.8);
 }
 
+
 html {
-    font-size: 60%;
+    font-size: 62.5%;
     overflow-x: hidden;
-  }
+}
 
 body {
-    background: var(--bg-color); /* Aplica el color de fondo definido en las variables CSS */
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 .header {
-    position: fixed; /* Fija el header en una posición que no cambia al hacer scroll */
-    width: 100%; /* El header ocupa todo el ancho disponible de la página */
+    position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    padding: 3rem 15%; /* Elimina cualquier espacio interno adicional del header, si quieres que el padding sea igual en izquierda que en derecha utilizar %*/
-    background: rgba(0, 0, 0, 0.3); /* Aplica un fondo negro semitransparente */
-    backdrop-filter: blur(10px); /* Agrega un efecto de desenfoque al fondo detrás del header */
-    display: flex; /* Da control para alinear los elementos hijos del header */
-    justify-content: space-between; /* Coloca los elementos hijos con espacio igual entre ellos */
-    align-items: center;/* Centra verticalmente los elementos dentro del header */
-    z-index: 1000; /* Asegura que el header esté encima de otros elementos de la página */
+    padding: 3rem 15%;
+    background: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
 }
 
-#menu-icon{
+#menu-icon {
     font-size: 3.5rem;
     color: var(--main-color);
     display: none;
+    cursor: pointer;
 }
 
-.logo{
+.logo {
     font-size: 3rem;
     color: var(--text-color);
     font-weight: 800;
-    /*ca,mbia el estilo del cursor*/
     cursor: pointer;
-    /*hace que la transicion sea mas suave*/
     transition: 0.3s ease-in-out;
 }
 
-/*El :hover se utiliza para aplicar estilos cuando el puntero esta encima de lo escogido*/
-.logo:hover{
-    /*Agranda el tamaño*/
- transform: scale(1.1);
+.logo:hover {
+    transform: scale(1.1);
 }
 
-span{
+span {
     background: linear-gradient(
         270deg,
-        rgb(87, 210, 241) 10%,
-        rgb(46, 117, 224) 100%
-    );/*Fondo de colo gradiente*/
-    /*Se utilizan las dos ultimas juntas*/
-    background-clip: text; /* Aplica el fondo solo al texto */
-    color: transparent;/* Hace el texto transparente para mostrar el fondo */
+        var(--accent-color) 10%,
+        var(--main-color) 100%
+    );
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.navbar a{
+.navbar a {
     font-size: 1.8rem;
     color: var(--text-color);
-    margin-left: 4rem;/*Representa el grueso de la fuente*/
+    margin-left: 4rem;
     font-weight: 500;
-    transition: 0.3 ease-in-out;
-    border-bottom: 3px solid transparent;/* */
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 0.5rem;
 }
 
-.navbar a:hover{
-    color: var(--main-color);/*Cambiamos el color al main color*/
-    border-bottom: 3px solid var(--main-color);/*Crea una linea debajo de los textos*/
+.navbar a:hover {
+    color: var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
 }
 
-.gradient-button{
-    font-size: 1.8rem;
-    padding: 1rem 2rem;
-    border-radius: 3rem;
-    background: linear-gradient(
-        279deg,
-        rgb(87, 210, 241) 10%,
-        rgb(46, 117, 224) 100%
-    );
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: 0.3 ease-in-out;
-    color: white;
-    border: none;
-    text-wrap: nowrap;
+section {
+    min-height: 100vh;
+    padding: 13rem 10%;
 }
 
-.gradient-button:hover{
-transform: scale(1.10);
-}
-
-section{
-    min-height: 100vh; /*Indica que el section ocupara el 100% de la pagina*/
-    padding: 13rem 10%;  
-}
-
-.home{
+.home {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10rem; /*Establece espacio entre los elementos*/
+    gap: 10rem;
 }
 
-.home-content{
+.home-content {
     display: flex;
-    flex-direction: column; /*Organiza el contenido en forma de columna*/
-    align-items: right;
+    flex-direction: column;
+    align-items: flex-end;
     text-align: right;
 }
 
-.home-content h1{
+.home-content h1 {
     font-size: 7rem;
     font-weight: 700;
-    margin-top: 0,5rem;
-    line-height: 1; /*Separacion entre linea*/
-    color: aliceblue;
+    margin-top: 0.5rem;
+    line-height: 1.1;
 }
 
-h2{
-    color: aliceblue;
-    font-size: 4rem;
-}
-
-h3{
-    font-size: 4rem;
-    line-height: 1.8;
-    color: aliceblue;
-}
-
-p{
+.home-content h3 {
+    font-size: 3.5rem;
     margin: 1rem 0;
-    display: flex;
-    font-size: 1.5rem;
-    color: aliceblue;
+    color: var(--highlight-color);
 }
 
-.home-img img{
-    width: 30vw; /*Manejamos el tamaño de la imagen*/
-    border-radius: 50%;
-    box-shadow: 0 0 30px var(--main-color); /*amos una sombra alrededor de la imagen*/
-    transition: 0.4s ease-in-out; /*Tiempo en el que se hace el efecto*/
+.home-content p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
 }
 
-.home-img img:hover{
+h2 {
+    color: var(--text-color);
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    font-size: 3rem;
+    line-height: 1.8;
+    color: var(--highlight-color);
+}
+
+p {
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.home-img img {
+    width: 25vw;
+    border-radius: 60%;
     box-shadow: 0 0 30px var(--main-color);
-    box-shadow: 0 0 50px var(--main-color);
-    box-shadow: 0 0 100px var(--main-color);
+    transition: 0.4s ease-in-out;
+    border: 3px solid var(--main-color);
 }
 
-.social-icons a{
-    display: inline-flex; /*Cra un contenedor ocupando solo el espacio que necesita, dejando alienar otras estiquetas */
+.home-img img:hover {
+    box-shadow: 0 0 50px var(--accent-color);
+}
+
+.home .social-icons a {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
@@ -174,92 +171,199 @@ p{
     border-radius: 50%;
     color: var(--main-color);
     margin: 3rem 0.5rem;
-    transition: 0.3 ease-in-out;
-}
-
-.social-icons a:hover{
-    color: var(--text-color);
-    background-color: var(--main-color);
-    transform: scale(1.2)translateY(-5px);
-    box-shadow: 0 0 25px var(--main-color);
-}
-
-.btn-group a{
-    font-size: 1.8rem;
-    margin: 0rem 0.5rem;
-    padding: 0.7rem 1.5rem;
-    color: black;
-    background: linear-gradient(
-        279deg,
-        rgb(87, 210, 241) 10%,
-        rgb(46, 117, 224) 100%
-    );
-    border-radius: 3rem;
-    letter-spacing: 1px;
     transition: 0.3s ease-in-out;
 }
 
-.btn-group a:hover{
+.home .social-icons a:hover {
     color: var(--text-color);
     background-color: var(--main-color);
+    transform: scale(1.2) translateY(-5px);
     box-shadow: 0 0 25px var(--main-color);
 }
 
-.about{
+.sobre-mi {
+    background: var(--second-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobreMi {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.sobreMi h2 {
+    font-size: 7rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.sobreMi-content {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.sobreMi-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: justify;
+}
+
+
+
+.sobreMi-skills h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.sobreMi-skills ul {
+    list-style-type: none;
+    padding: 0 2rem;
+}
+
+.sobreMi-skills li {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-left: 3rem;
+    position: relative;
+    color: var(--highlight-color);
+}
+
+.sobreMi-skills li::before {
+    content: "▹";
+    position: absolute;
+    left: 1rem;
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.conocimientos {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
-    background: var(--second-bg-color);
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    background: var(--bg-color);
 }
 
-.about-content a {
-    display: inline-flex;
-    justify-content: left;
-    align-items: left;
-    font-size: 1.8rem;
-    margin: 1rem 0rem;
-    padding: 0.7rem 1.5rem;
+.about-content {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 7rem;
+    margin-bottom: 4rem;
+}
+
+.category {
+    background: rgba(124, 58, 237, 0.1);
+    margin: 20px auto;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    padding: 30px;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.2);
+    border-color: var(--accent-color);
+}
+
+.category h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--highlight-color);
+}
+
+.about-content .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.about-content .icons img {
+    width: 60px;
+    height: 60px;
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(20%);
+}
+
+.about-content .icons img:hover {
+    transform: scale(1.2) translateY(-5px);
+    filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+    
+    .home {
+        flex-direction: column-reverse;
+        gap: 5rem;
+        text-align: center;
+    }
+    
+    .home-content {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .home-img img {
+        width: 60vw;
+    }
+    
+    .category {
+        width: 90%;
+    }
+}
+
+.theme-toggle {
+    font-size: 2.5rem;
     color: var(--text-color);
-    background: linear-gradient(
-        279deg,
-        rgb(87, 210, 241) 10%,
-        rgb(46, 117, 224) 100%
-    );
-    border-radius: 3rem;
-    box-shadow: 0 0 10px var(--main-color); /* Sombra permanente válida */
+    cursor: pointer;
+    margin-left: 4rem;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
 }
 
-.about-content a:hover {
+.theme-toggle:hover {
+    color: var(--accent-color);
     transform: scale(1.1);
 }
 
-.about-img img {
-    width: 30vw;
-    box-shadow: 0 0 25px var(--main-color); /* Corregido */
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-
+/* Estilos para el modo claro */
+.light-mode {
+    --bg-color: #f8fafc;
+    --second-bg-color: #e2e8f0;
+    --text-color: #0f172a;
+    --main-color: #7c3aed;
+    --accent-color: #5b21b6;
+    --highlight-color: #1e293b;
+    --navbar-bg: rgba(248, 250, 252, 0.8);
 }
 
-.about-img img:hover {
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color),
-                0 0 100px var(--main-color);
-    transform: scale(1.4); /* Hace crecer la imagen en hover */
+.light-mode .home-img img {
+    box-shadow: 0 0 30px var(--accent-color);
+    border: 3px solid var(--accent-color);
 }
 
-::-webkit-scrollbar{
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb{
-    background: linear-gradient(
-        279deg,
-        rgb(87, 210, 241) 10%,
-        rgb(46, 117, 224) 100%
-    );
-}
-
-::-webkit-scrollbar-track{
-    background-color: var(--bg-color);
-}
