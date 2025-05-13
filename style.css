@@ -1,3 +1,7 @@
+/*
+  Autor: Javier Boudere Llorente
+*/
+
 :root {
     --primary-color: #7c3aed;
     --primary-dark: #5b21b6;
@@ -27,7 +31,6 @@
     --primary-light: #a78bfa;
 }
 
-/* Estilos Base */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-color);
@@ -55,7 +58,6 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-text-fill-color: transparent;
 }
 
-/* Navbar */
 .navbar {
     transition: var(--transition);
 }
@@ -127,7 +129,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.1);
 }
 
-/* Hero Section */
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -192,7 +193,6 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(104, 160, 99, 0.1);
 }
 
-/* About Section */
 .about-img {
     width: 100%;
     max-width: 400px;
@@ -235,7 +235,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Colores personalizados por red social */
 .social-icons a[href*="github"] {
     background-color: #7c3aed;
     color: #fff;
@@ -263,7 +262,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #4078c0;
 }
 
-/* Skills Section */
 .skill-card {
     background: var(--bg-light);
     border-radius: var(--border-radius);
@@ -324,7 +322,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: width 1s ease-in-out;
 }
 
-/* Projects Section */
 .project-card {
     background: var(--bg-light);
     border-radius: var(--border-radius);
@@ -431,7 +428,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
-/* Experience Section */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -515,7 +511,6 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-light);
 }
 
-/* Contact Section */
 .contact-info {
     margin-bottom: 2rem;
 }
@@ -580,14 +575,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.25);
 }
 
-/* Footer */
-footer {
-    background: var(--bg-light);
-    color: var(--text-color);
-    padding: 2rem 0;
-}
 
-/* Back to Top */
 .back-to-top {
     position: fixed;
     bottom: 2rem;
@@ -617,7 +605,6 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Divider */
 .divider {
     width: 80px;
     height: 4px;
@@ -626,7 +613,6 @@ footer {
     border-radius: 2px;
 }
 
-/* Section Header */
 .section-header {
     margin-bottom: 4rem;
 }
@@ -635,7 +621,6 @@ footer {
     font-size: 2.5rem;
 }
 
-/* styles.css */
 .footer {
     background-color: #6a0dad;
     color: white;
@@ -654,8 +639,6 @@ footer {
     flex-wrap: wrap;
 }
 
-
-/* Responsive */
 @media (max-width: 768px) {
     .timeline::before {
         left: 30px;
@@ -693,7 +676,6 @@ footer {
     }
 }
 
-/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }

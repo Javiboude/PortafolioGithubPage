@@ -1,3 +1,7 @@
+/*
+  Autor: Javier Boudere Llorente
+*/
+
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar AOS Animation
     AOS.init({
@@ -7,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         offset: 100
     });
 
-    // Toggle del tema oscuro/claro
+    // Cambio del tema oscuro/claro
     const themeToggle = document.querySelector('.theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
     const body = document.body;
@@ -117,35 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(skillsSection);
     }
 
-    // Manejo del formulario de contacto
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Aquí iría la lógica para enviar el formulario
-            // Por ahora solo mostramos un mensaje
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            
-            submitButton.textContent = 'Enviando...';
-            submitButton.disabled = true;
-            
-            // Simulamos el envío
-            setTimeout(() => {
-                submitButton.textContent = '¡Mensaje Enviado!';
-                
-                setTimeout(() => {
-                    submitButton.textContent = originalText;
-                    submitButton.disabled = false;
-                    this.reset();
-                }, 2000);
-            }, 1500);
-        });
-    }
-
-    // Efecto parallax para la imagen del héroe
+    // Efecto parallax para la imagen del home
     const heroImg = document.querySelector('.hero-img');
     
     if (heroImg) {
@@ -156,12 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Inicializar tooltips de Bootstrap
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
-});
-
+// Descarga del CV
 function downloadCV() {
     const link = document.createElement('a');
     link.href = 'Screens/CurriculumTrab.pdf';
@@ -170,3 +141,9 @@ function downloadCV() {
     link.click();
     document.body.removeChild(link);
 }
+
+// Inicializar tooltips de Bootstrap
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+});
