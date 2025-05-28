@@ -328,6 +328,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     height: 100%;
+    justify-content: center;
 }
 
 .project-card:hover {
@@ -369,6 +370,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
+    justify-content: center;
 }
 
 .project-card:hover .project-img img {
