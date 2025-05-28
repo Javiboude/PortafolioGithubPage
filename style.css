@@ -187,8 +187,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .tech-badge.springBoot {
     bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 45%;
     color: #68a063;
     background: rgba(104, 160, 99, 0.1);
 }
@@ -579,7 +578,7 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top {
     position: fixed;
     bottom: 2rem;
-    right: 2rem;
+    left: 2rem;
     width: 50px;
     height: 50px;
     background: var(--primary-color);
