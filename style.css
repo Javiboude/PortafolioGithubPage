@@ -351,9 +351,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-img {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    height: 200px;
+    height: 200px; /* Puedes ajustar esta altura */
 }
+
 
 .btn-download {
     display: flex;
